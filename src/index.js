@@ -1,9 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Main from './Main';
+import Header from './components/Header'
 import * as serviceWorker from './serviceWorker';
-
+import {BrowserRouter as Router} from 'react-router-dom'
+const App = () => (
+  <Router>
+    <Header/>
+    <Main/>
+  </Router>
+)
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
